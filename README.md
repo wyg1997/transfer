@@ -23,7 +23,7 @@ run `transfer -h` in shell.
 ### upload
 
 ```shell
-transfer upload [directory/file]
+transfer upload <directory/file>
 ```
 
 ### upload with password
