@@ -2,7 +2,9 @@
 
 Transfer files simply in shell.
 
-## install
+upload and download powered by `https://transfer.sh/`.
+
+## Install
 
 ### clone and install
 
@@ -18,7 +20,7 @@ TODO
 
 ## Usage
 
-run `transfer -h` in shell.
+Run `transfer -h` in shell to see usage.
 
 ### upload
 
