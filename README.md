@@ -16,7 +16,9 @@ pip install .
 
 ### from PyPI
 
-TODO
+```shell
+pip install file-transfer-tools
+```
 
 ## Usage
 
