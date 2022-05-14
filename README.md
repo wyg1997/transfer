@@ -2,7 +2,7 @@
 
 Transfer files simply in shell.
 
-upload and download powered by `https://transfer.sh/`.
+upload and download powered by [https://transfer.sh/](https://transfer.sh/).
 
 ## Install
 
