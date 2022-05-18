@@ -6,7 +6,6 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="file-transfer-tools",
-    version="0.0.1",
     author="wyg1997",
     author_email="wangyinggang@foxmail.com",
     description="Transfer files simply in shell",
