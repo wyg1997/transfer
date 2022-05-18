@@ -1,12 +1,14 @@
 import argparse
 
 from transfer.core import upload, download, paste
+from transfer.version import __version__
 
 
 def parse_args():
     arg_parser = argparse.ArgumentParser(
         prog="transfer", description="Transfer files simply in shell."
     )
+    arg_parser.add_argument("-V", "--version", action="version", version=__version__)
     arg_parser.set_defaults(func=lambda _: arg_parser.print_help())
     sub_parser = arg_parser.add_subparsers(help="sub-command")
 
