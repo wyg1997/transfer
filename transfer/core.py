@@ -1,7 +1,11 @@
-import os
 import os.path as osp
 
-from transfer.utils import compress_directory, check_gpg_install
+from transfer.utils import (
+    compress_directory,
+    check_gpg_install,
+    run_command_and_return,
+    write_string_to_clipboard,
+)
 
 
 # upload
@@ -32,7 +36,9 @@ def upload(args):
     else:
         command = _upload_command.format(file, basename)
 
-    os.system(command)
+    response = run_command_and_return(command).strip()
+    print(f"file link: {response}")
+    write_string_to_clipboard(response)
 
 
 # download
@@ -59,7 +65,7 @@ def download(args):
     else:
         command = _download_command.format(url, path)
 
-    os.system(command)
+    run_command_and_return(command)
 
 
 # paste
