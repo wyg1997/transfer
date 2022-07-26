@@ -23,7 +23,7 @@ def upload(args):
         basename = osp.basename(target)
         file = target
     else:
-        basename = osp.dirname(target) + ".zip"
+        basename = osp.dirname(target + "/") + ".zip"
         file = compress_directory(target)
 
     if args.encrypt:

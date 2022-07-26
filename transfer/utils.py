@@ -11,7 +11,7 @@ def compress_directory(directory):
         # Create the zip file
         with zipfile.ZipFile(temp, "w") as zip_file:
             # Walk the directory and add the files to the zip file
-            for root, dirs, files in os.walk(directory):
+            for root, _, files in os.walk(directory):
                 for file in files:
                     zip_file.write(os.path.join(root, file))
 
