@@ -6,6 +6,7 @@ from transfer.utils import (
     run_command_and_return,
     write_string_to_clipboard,
 )
+from transfer.paste_api import paste_file_to_pastebin
 
 
 # upload
@@ -37,7 +38,7 @@ def upload(args):
         command = _upload_command.format(file, basename)
 
     response = run_command_and_return(command).strip()
-    print(f"file link: {response}")
+    print(f"File link: {response}")
     write_string_to_clipboard(response)
 
 
@@ -73,4 +74,7 @@ def paste(args):
     """
     Pastes text to the server.
     """
-    raise NotImplementedError
+    file = args.target
+    url = paste_file_to_pastebin(file, expires=args.expires, file_type=args.type)
+    print("Paste link:", url)
+    write_string_to_clipboard(url)

@@ -1,4 +1,5 @@
 import os
+from os import path as osp
 import tempfile
 import zipfile
 import base64
@@ -48,3 +49,14 @@ def write_string_to_clipboard(string: str):
     base64_str = base64.b64encode(string.encode())
     osc52_str = b"\033]52;p;" + base64_str + b"\a"
     write_to_tty(osc52_str)
+
+
+def read_text_from_file(file_path: str):
+    """
+    Read the string from the file.
+    """
+    if not osp.isfile(file_path):
+        raise RuntimeError(f"{file_path} is not a file.")
+
+    with open(file_path, "r") as f:
+        return f.read()

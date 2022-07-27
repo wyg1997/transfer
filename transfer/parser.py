@@ -32,5 +32,15 @@ def parse_args():
     # paste
     paste_parser = sub_parser.add_parser("paste", help="paste text to web")
     paste_parser.set_defaults(func=paste)
+    paste_parser.add_argument(
+        "--expires",
+        choices=["once", "1h", "1d", "1w", "21d"],
+        help="expire time",
+        default="21d",
+    )
+    paste_parser.add_argument(
+        "--type", help="The type of target file. It decides which lexer to use."
+    )
+    paste_parser.add_argument("target", help="target file to paste text")
 
     return arg_parser.parse_args()
