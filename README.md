@@ -60,6 +60,6 @@ Paste the content of file to [https://pastebin.mozilla.org/](https://pastebin.mo
 transfer paste [-h] [--expires {once,1h,1d,1w,21d}] [--type TYPE] target
 ```
 
-> NOTE: All supported TYPE see [file type mapping.md]("FILE_TYPE_MAPPING.md"). But **you
+> NOTE: All supported TYPE see [file type mapping.md](FILE_TYPE_MAPPING.md). But **you
 needn't assign the type in most situation**, it will automatically choose a suitable type
 according file extension.
