@@ -6,18 +6,18 @@ upload and download powered by [https://transfer.sh/](https://transfer.sh/).
 
 ## Install
 
-### clone and install
+### 1. from PyPI (Recommended)
+
+```shell
+pip install file-transfer-tools
+```
+
+### 2. clone and install
 
 ```shell
 git clone https://github.com/wyg1997/transfer.git
 cd transfer
 pip install .
-```
-
-### from PyPI
-
-```shell
-pip install file-transfer-tools
 ```
 
 ## Usage
